@@ -1,0 +1,13 @@
+=== Chest X-Ray Models Evaluation Run ===
+
+Evaluating Chest CNN Keras...
+Chest CNN Keras success. Test Acc: 0.8606
+
+Evaluating Chest CNN PyTorch + XGB...
+Chest CNN PyTorch + XGB success. Test Acc: 0.7404
+
+Evaluating Chest EfficientNet Hard Mined + XGB...
+Chest EfficientNet Hard Mined + XGB success. Test Acc: 0.8189
+
+Saved deep_learning\chest_xray\results\leaderboard.csv
+Saved deep_learning\chest_xray\results\metrics_summary.csv

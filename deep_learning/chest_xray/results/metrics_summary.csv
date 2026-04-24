@@ -1,0 +1,4 @@
+model_name,source_script,framework,validation_accuracy,test_accuracy,precision_macro,recall_macro,f1_macro,roc_auc,status,notes
+Chest CNN Keras,cnn_chest_xray.py,Keras,0.75,0.8605769230769231,0.8511130558442268,0.8517094017094017,0.8514086453848491,0.9380013149243919,Success,
+Chest CNN PyTorch + XGB,chest_xg.py,PyTorch + XGBoost,0.6875,0.7403846153846154,0.8297794117647059,0.6572649572649573,0.6553144478238928,0.9082182774490467,Success,
+Chest EfficientNet Hard Mined + XGB,chest_hard.py,PyTorch + XGBoost,0.8125,0.8189102564102564,0.884158512243805,0.7594017094017094,0.7783247979326411,0.9466688582073197,Success,
