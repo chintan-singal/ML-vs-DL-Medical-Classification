@@ -1,0 +1,15 @@
+script_name,model_file,framework,dataset,validation_accuracy,test_accuracy,precision_macro,recall_macro,f1_macro,status,notes
+cnn_brain_tumor.py,brain_tumor_cnn.h5,Keras,Brain Tumor,0.9098214285714286,0.829375,0.8514580008547085,0.829375,0.8275431957449049,Success,
+brain_tumor_classft.py,cnn_class_tuned_fixed.keras,Keras,Brain Tumor,0.49375,0.5075,0.7289152516935336,0.5075000000000001,0.3668590615866628,Success,
+cnn_brain_tumor_fine.py,cnn_final_brain_tumor.keras,Keras,Brain Tumor,0.6651785714285714,0.62125,0.7590564456543837,0.6212500000000001,0.5483239301549258,Success,
+cnn_brain_tumor_v3.py,brain_tumor_v3.keras,Keras,Brain Tumor,0.6133928571428572,0.558125,0.6172560466369938,0.558125,0.524276528053427,Success,
+cnn_brain_tumor_mobilenet.py,brain_tumor_mobilenet_ft.keras,Keras,Brain Tumor,0.8696428571428572,0.81,0.8162076135139131,0.81,0.8001476660829114,Success,
+cnn_brain_tumor_densenet.py,brain_tumor_densenet.keras,Keras,Brain Tumor,0.8875,0.809375,0.8175322845515991,0.8093750000000001,0.7988503202355784,Success,
+brain_tumor_cnn_cc.py,best_phase2.keras,Keras,Brain Tumor,0.5955357142857143,0.569375,0.557958588202669,0.569375,0.513116580189035,Success,
+brain_tumor_pre.py,brain_tumor_edge_model.keras,Keras,Brain Tumor,,,,,,Skipped,Missing file: brain_tumor_edge_model.keras
+brain_hard_mine.py,brain_tumor_hardmined_cnn.pth,PyTorch + XGBoost,Brain Tumor,0.9964285714285714,0.941875,0.9464288471422264,0.941875,0.94013921159448,Success,
+brain_tumor_cnn_svm.py,brain_tumor_cnn.h5 + Retrained SVM,Keras + SVM,Brain Tumor,0.9526785714285714,0.89625,0.8999567225751022,0.89625,0.8941613942175649,Success,Retrained ML Head
+brain_tumor_cnn_randomforest.py,brain_tumor_cnn.h5 + Retrained RF,Keras + RF,Brain Tumor,0.9446428571428571,0.895,0.8995166020038359,0.895,0.8922468991325951,Success,Retrained ML Head
+brain_tumor_cnn_xgboost.py,brain_tumor_cnn.h5 + Retrained XGB,Keras + XGB,Brain Tumor,0.94375,0.89875,0.9029858742746543,0.8987499999999999,0.896908368457541,Success,Retrained ML Head
+brain_tumor_cnn_ensemble.py,brain_tumor_cnn.h5 + Retrained ENSEMBLE,Keras + ENSEMBLE,Brain Tumor,0.9508928571428571,0.8975,0.9028761911637866,0.8975000000000001,0.8958191112995213,Success,Retrained ML Head
+brain_tumor_cnn_dense_svm.py,brain_tumor_densenet.keras + Retrained SVM,Keras + SVM,Brain Tumor,0.9196428571428571,0.87375,0.8812777147615662,0.87375,0.8716172263741162,Success,Retrained ML Head

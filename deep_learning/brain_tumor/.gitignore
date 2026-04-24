@@ -1,0 +1,83 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual Environments
+venv/
+env/
+.venv/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Logs / Temp
+# =========================
+*.log
+*.tmp
+*.temp
+
+# =========================
+# Secrets / Personal
+# =========================
+.env
+.env.*
+*.key
+*.pem
+secrets.json
+credentials.json
+
+# =========================
+# Data / Datasets
+# =========================
+data/
+datasets/
+dataset/
+**/data/
+**/datasets/
+
+# =========================
+# Model Files
+# =========================
+*.h5
+*.keras
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.pb
+*.pkl
+*.joblib
+*.sav
+*.bin
+
+# =========================
+# Large Outputs / Results
+# =========================
+*.npy
+*.npz
+*.parquet
+
+
+
+# =========================
+# Python tooling
+# =========================
+.pytest_cache/
+.mypy_cache/
+coverage.xml
+htmlcov/
