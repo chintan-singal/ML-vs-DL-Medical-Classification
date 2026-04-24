@@ -441,3 +441,9 @@ Please check the `models/` folder for Google Drive links.
 This project evolved from simple CNN baselines into a sophisticated medical imaging research pipeline involving deep learning, transfer learning, ensemble learning, feature engineering, and hard mining.
 
 The final system achieved **94% classification accuracy** on a balanced 4-class MRI brain tumor benchmark, demonstrating the effectiveness of combining representation learning with advanced ensemble and boosting techniques.
+
+---
+
+# Author
+
+**Chintan Kumar Singal**

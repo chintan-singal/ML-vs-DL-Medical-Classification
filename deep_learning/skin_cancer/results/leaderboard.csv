@@ -1,0 +1,11 @@
+model_name,source_script,framework,validation_accuracy,test_accuracy,precision_macro,recall_macro,f1_macro,roc_auc,status,notes
+Skin CNN Basic,cnn_skin.py,Keras,,0.7478781827259111,0.586594048797069,0.4448313544611506,0.48013712685550874,0.9092610047565451,Success,
+Skin CNN Deep,cnn_skin_v2.py,Keras,,,,,,,Skipped,Missing file: skin_cnn_deep_model.h5
+Skin CNN Fine,cnn_skin_fine.py,Keras,,,,,,,Skipped,Missing file: skin_final_cnn.keras
+Skin CNN V3 Best,cnn_skin_v3.py,Keras,,0.5072391412880679,0.1990465159204977,0.26885332751504276,0.21467799716487432,0.6564031131708488,Success,
+Skin CNN V3 Final,cnn_skin_v3.py,Keras,,,,,,,Skipped,Missing file: skin_custom_final.keras
+CNN + SVM,skin_ml_dl.py,Keras + SVM,,0.7438841737393909,0.5667915365636877,0.45268019992807706,0.49011187221109626,0.9009022728865927,Success,Retrained Head
+CNN + RF,skin_ml_dl.py,Keras + RF,,0.7593609585621568,0.6834669824818024,0.4401065893896582,0.48572657984190126,0.9150033910665919,Success,Retrained Head
+CNN + XGB,skin_ml_dl.py,Keras + XGB,,0.7493759360958562,0.6010596485866285,0.45511360569555054,0.49825735179648784,0.9148453982442596,Success,Retrained Head
+CNN + Custom XGB,skin_ml_dl_v2.py,Keras + XGB_CUSTOM,,0.7398901647528707,0.5650971420567534,0.4849731397462698,0.5158480313444271,0.914155987704829,Success,Retrained Head
+PyTorch Hard Mined XGB,skin_hard_mine.py,PyTorch + XGBoost,,0.8592111832251622,0.8349716977050259,0.6553425634667841,0.7226121094655137,0.9717379879992097,Success,Loaded saved models
