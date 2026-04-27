@@ -1,0 +1,184 @@
+X_train shape: (5216, 224, 224, 1)
+X_val shape:   (16, 224, 224, 1)
+X_test shape:  (624, 224, 224, 1)
+
+X_train shape: (5216, 224, 224, 1)
+X_val shape:   (16, 224, 224, 1)
+X_test shape:  (624, 224, 224, 1)
+y_train shape: (5216,)
+y_val shape:   (16,)
+y_test shape:  (624,)
+
+Original X_train shape: (5216, 224, 224, 1)
+Flattened X_train shape: (5216, 50176)
+
+LogisticRegression(max_iter=1000, random_state=42)
+Train class distribution: [1341 3875]
+Val class distribution:   [8 8]
+Test class distribution:  [234 390]
+
+
+── Validation Results ──
+  Accuracy : 0.7500
+  Precision: 0.6667
+  Recall   : 1.0000
+  F1-Score : 0.8000
+  ROC-AUC  : 1.0000
+
+
+── Test Results ──
+  Accuracy : 0.7452
+  Precision: 0.7143
+  Recall   : 0.9872
+  F1-Score : 0.8288
+  ROC-AUC  : 0.9037
+
+X_train shape: (5216, 224, 224, 1)
+After prepare — X_train shape: (5216, 224, 224)
+
+Extracting features (this may take a minute)...
+  ✓ Flat pixels
+  ✓ HOG
+
+/usr/local/lib/python3.12/dist-packages/skimage/feature/texture.py:385: UserWarning: Applying `local_binary_pattern` to floating-point images may give unexpected results when small numerical differences between adjacent pixels are present. It is recommended to use this function with images of integer dtype.
+  warnings.warn(
+
+  ✓ LBP
+  ✓ Texture
+  ✓ Combined (HOG + LBP + Texture)
+
+Feature dimensions:
+  Flat    : 50176
+  HOG     : 26244
+  LBP     : 256
+  Texture : 7
+  Combined: 26507
+
+============================================================
+  Feature Set: Flat Pixels (Baseline)
+============================================================
+
+  ▸ Logistic Regression
+  Validation   | Acc: 0.8750  Prec: 0.8000  Rec: 1.0000  F1: 0.8889  AUC: 1.0000
+  Test         | Acc: 0.7612  Prec: 0.7269  Rec: 0.9897  F1: 0.8382  AUC: 0.8810
+
+
+  ▸ SVM (RBF)
+  Validation   | Acc: 0.7500  Prec: 0.6667  Rec: 1.0000  F1: 0.8000  AUC: 1.0000
+  Test         | Acc: 0.7772  Prec: 0.7418  Rec: 0.9872  F1: 0.8471  AUC: 0.9231
+
+
+  ▸ Random Forest
+  Validation   | Acc: 0.6875  Prec: 0.6154  Rec: 1.0000  F1: 0.7619  AUC: 0.9688
+  Test         | Acc: 0.7548  Prec: 0.7207  Rec: 0.9923  F1: 0.8350  AUC: 0.9333
+
+
+============================================================
+  Feature Set: HOG
+============================================================
+
+  ▸ Logistic Regression
+  Validation   | Acc: 1.0000  Prec: 1.0000  Rec: 1.0000  F1: 1.0000  AUC: 1.0000
+  Test         | Acc: 0.7981  Prec: 0.7683  Rec: 0.9692  F1: 0.8571  AUC: 0.8936
+
+
+  ▸ SVM (RBF)
+  Validation   | Acc: 1.0000  Prec: 1.0000  Rec: 1.0000  F1: 1.0000  AUC: 1.0000
+  Test         | Acc: 0.7196  Prec: 0.6923  Rec: 0.9923  F1: 0.8156  AUC: 0.9211
+
+
+  ▸ Random Forest
+  Validation   | Acc: 0.6250  Prec: 0.5714  Rec: 1.0000  F1: 0.7273  AUC: 1.0000
+  Test         | Acc: 0.7003  Prec: 0.6784  Rec: 0.9897  F1: 0.8050  AUC: 0.8805
+
+
+============================================================
+  Feature Set: LBP
+============================================================
+
+  ▸ Logistic Regression
+  Validation   | Acc: 0.6250  Prec: 0.5714  Rec: 1.0000  F1: 0.7273  AUC: 0.8594
+  Test         | Acc: 0.7788  Prec: 0.7614  Rec: 0.9410  F1: 0.8417  AUC: 0.8410
+
+
+  ▸ SVM (RBF)
+  Validation   | Acc: 0.6250  Prec: 0.5714  Rec: 1.0000  F1: 0.7273  AUC: 0.8438
+  Test         | Acc: 0.7901  Prec: 0.7627  Rec: 0.9641  F1: 0.8516  AUC: 0.8152
+
+
+  ▸ Random Forest
+  Validation   | Acc: 0.7500  Prec: 0.6667  Rec: 1.0000  F1: 0.8000  AUC: 0.8594
+  Test         | Acc: 0.7500  Prec: 0.7276  Rec: 0.9590  F1: 0.8274  AUC: 0.8413
+
+
+============================================================
+  Feature Set: Texture
+============================================================
+
+  ▸ Logistic Regression
+  Validation   | Acc: 0.5625  Prec: 0.5333  Rec: 1.0000  F1: 0.6957  AUC: 0.8281
+  Test         | Acc: 0.7885  Prec: 0.7676  Rec: 0.9487  F1: 0.8486  AUC: 0.8589
+
+
+  ▸ SVM (RBF)
+  Validation   | Acc: 0.5625  Prec: 0.5333  Rec: 1.0000  F1: 0.6957  AUC: 0.7500
+  Test         | Acc: 0.7772  Prec: 0.7722  Rec: 0.9128  F1: 0.8367  AUC: 0.8295
+
+
+  ▸ Random Forest
+  Validation   | Acc: 0.5000  Prec: 0.5000  Rec: 1.0000  F1: 0.6667  AUC: 0.6797
+  Test         | Acc: 0.7724  Prec: 0.7616  Rec: 0.9256  F1: 0.8356  AUC: 0.8471
+
+
+============================================================
+  Feature Set: HOG + LBP + Texture
+============================================================
+
+  ▸ Logistic Regression
+  Validation   | Acc: 1.0000  Prec: 1.0000  Rec: 1.0000  F1: 1.0000  AUC: 1.0000
+  Test         | Acc: 0.8029  Prec: 0.7730  Rec: 0.9692  F1: 0.8601  AUC: 0.8949
+
+
+  ▸ SVM (RBF)
+  Validation   | Acc: 1.0000  Prec: 1.0000  Rec: 1.0000  F1: 1.0000  AUC: 1.0000
+  Test         | Acc: 0.7196  Prec: 0.6923  Rec: 0.9923  F1: 0.8156  AUC: 0.9212
+
+
+  ▸ Random Forest
+  Validation   | Acc: 0.6250  Prec: 0.5714  Rec: 1.0000  F1: 0.7273  AUC: 1.0000
+  Test         | Acc: 0.6923  Prec: 0.6725  Rec: 0.9897  F1: 0.8008  AUC: 0.8977
+
+
+
+================================================================================
+FINAL SUMMARY — Test Set
+================================================================================
+
+  Logistic Regression
+  Feature Set                   Acc    Prec     Rec      F1     AUC
+  ------------------------------------------------------------
+  Flat Pixels (Baseline)     0.7612  0.7269  0.9897  0.8382  0.8810
+  HOG                        0.7981  0.7683  0.9692  0.8571  0.8936
+  LBP                        0.7788  0.7614  0.9410  0.8417  0.8410
+  Texture                    0.7885  0.7676  0.9487  0.8486  0.8589
+  HOG + LBP + Texture        0.8029  0.7730  0.9692  0.8601  0.8949
+
+  SVM (RBF)
+  Feature Set                   Acc    Prec     Rec      F1     AUC
+  ------------------------------------------------------------
+  Flat Pixels (Baseline)     0.7772  0.7418  0.9872  0.8471  0.9231
+  HOG                        0.7196  0.6923  0.9923  0.8156  0.9211
+  LBP                        0.7901  0.7627  0.9641  0.8516  0.8152
+  Texture                    0.7772  0.7722  0.9128  0.8367  0.8295
+  HOG + LBP + Texture        0.7196  0.6923  0.9923  0.8156  0.9212
+
+  Random Forest
+  Feature Set                   Acc    Prec     Rec      F1     AUC
+  ------------------------------------------------------------
+  Flat Pixels (Baseline)     0.7548  0.7207  0.9923  0.8350  0.9333
+  HOG                        0.7003  0.6784  0.9897  0.8050  0.8805
+  LBP                        0.7500  0.7276  0.9590  0.8274  0.8413
+  Texture                    0.7724  0.7616  0.9256  0.8356  0.8471
+  HOG + LBP + Texture        0.6923  0.6725  0.9897  0.8008  0.8977
+
+Done!

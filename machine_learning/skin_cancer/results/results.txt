@@ -1,0 +1,197 @@
+Downloading dataset...
+Using Colab cache for faster access to the 'skin-cancer-mnist-ham10000' dataset.
+Dataset path: /kaggle/input/skin-cancer-mnist-ham10000
+CSV found     : /kaggle/input/skin-cancer-mnist-ham10000/HAM10000_metadata.csv
+Image folders : ['/kaggle/input/skin-cancer-mnist-ham10000/ham10000_images_part_1', '/kaggle/input/skin-cancer-mnist-ham10000/HAM10000_images_part_1', '/kaggle/input/skin-cancer-mnist-ham10000/ham10000_images_part_2', '/kaggle/input/skin-cancer-mnist-ham10000/HAM10000_images_part_2']
+
+CSV shape     : (10015, 7)
+CSV columns   : ['lesion_id', 'image_id', 'dx', 'dx_type', 'age', 'sex', 'localization']
+dx
+nv       6705
+mel      1113
+bkl      1099
+bcc       514
+akiec     327
+vasc      142
+df        115
+Name: count, dtype: int64
+
+Total images found: 10015
+
+Loading images...
+Loaded: 10015 images | Skipped: 0
+X shape: (10015, 64, 64, 3)
+y shape: (10015,)
+Class distribution: [1099 6705  115 1113  142  514  327]
+
+Split sizes:
+  Train : 7010
+  Val   : 1002
+  Test  : 2003
+
+Extracting features (this may take a few minutes)...
+  ✓ Flat pixels (RGB)
+  ✓ HOG (per channel)
+
+/usr/local/lib/python3.12/dist-packages/skimage/feature/texture.py:385: UserWarning: Applying `local_binary_pattern` to floating-point images may give unexpected results when small numerical differences between adjacent pixels are present. It is recommended to use this function with images of integer dtype.
+  warnings.warn(
+
+  ✓ LBP (per channel)
+  ✓ Texture (per channel)
+  ✓ Combined (HOG + LBP + Texture)
+
+Feature dimensions:
+  Flat    : 12288
+  HOG     : 5292
+  LBP     : 768
+  Texture : 21
+  Combined: 6081
+
+============================================================
+  Feature Set: Flat Pixels (Baseline)
+============================================================
+
+  ▸ Logistic Regression
+
+/usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1247: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. From then on, it will always use 'multinomial'. Leave it to its default value to avoid this warning.
+  warnings.warn(
+
+  Validation   | Acc: 0.6607  Prec: 0.4241  Rec: 0.3364  F1: 0.3658  AUC: 0.8088
+  Test         | Acc: 0.6595  Prec: 0.4179  Rec: 0.3547  F1: 0.3788  AUC: 0.8087
+
+
+  ▸ SVM (RBF)
+  Validation   | Acc: 0.7295  Prec: 0.4331  Rec: 0.2877  F1: 0.3168  AUC: 0.9140
+  Test         | Acc: 0.7204  Prec: 0.3959  Rec: 0.2617  F1: 0.2850  AUC: 0.8907
+
+
+  ▸ Random Forest
+  Validation   | Acc: 0.7246  Prec: 0.3907  Rec: 0.2858  F1: 0.3017  AUC: 0.8948
+  Test         | Acc: 0.7199  Prec: 0.3639  Rec: 0.2633  F1: 0.2792  AUC: 0.8835
+
+
+============================================================
+  Feature Set: HOG
+============================================================
+
+  ▸ Logistic Regression
+
+/usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1247: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. From then on, it will always use 'multinomial'. Leave it to its default value to avoid this warning.
+  warnings.warn(
+
+  Validation   | Acc: 0.6238  Prec: 0.2681  Rec: 0.2580  F1: 0.2599  AUC: 0.7735
+  Test         | Acc: 0.6006  Prec: 0.2446  Rec: 0.2334  F1: 0.2365  AUC: 0.7348
+
+
+  ▸ SVM (RBF)
+  Validation   | Acc: 0.6976  Prec: 0.2736  Rec: 0.1813  F1: 0.1777  AUC: 0.8445
+  Test         | Acc: 0.6950  Prec: 0.3222  Rec: 0.1850  F1: 0.1842  AUC: 0.8207
+
+
+  ▸ Random Forest
+  Validation   | Acc: 0.6766  Prec: 0.1876  Rec: 0.1519  F1: 0.1319  AUC: 0.7369
+  Test         | Acc: 0.6745  Prec: 0.3150  Rec: 0.1493  F1: 0.1273  AUC: 0.7425
+
+
+============================================================
+  Feature Set: LBP
+============================================================
+
+  ▸ Logistic Regression
+
+/usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1247: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. From then on, it will always use 'multinomial'. Leave it to its default value to avoid this warning.
+  warnings.warn(
+
+  Validation   | Acc: 0.7006  Prec: 0.3684  Rec: 0.2266  F1: 0.2440  AUC: 0.8100
+  Test         | Acc: 0.6790  Prec: 0.2584  Rec: 0.1956  F1: 0.2008  AUC: 0.7593
+
+
+  ▸ SVM (RBF)
+  Validation   | Acc: 0.6986  Prec: 0.2327  Rec: 0.1943  F1: 0.1951  AUC: 0.7963
+  Test         | Acc: 0.6890  Prec: 0.2057  Rec: 0.1836  F1: 0.1802  AUC: 0.7862
+
+
+  ▸ Random Forest
+  Validation   | Acc: 0.7026  Prec: 0.3004  Rec: 0.2012  F1: 0.2089  AUC: 0.8063
+  Test         | Acc: 0.6875  Prec: 0.2680  Rec: 0.1857  F1: 0.1878  AUC: 0.7826
+
+
+============================================================
+  Feature Set: Texture
+============================================================
+
+  ▸ Logistic Regression
+
+/usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1247: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. From then on, it will always use 'multinomial'. Leave it to its default value to avoid this warning.
+  warnings.warn(
+
+  Validation   | Acc: 0.7395  Prec: 0.4604  Rec: 0.4134  F1: 0.4276  AUC: 0.9099
+  Test         | Acc: 0.7259  Prec: 0.4966  Rec: 0.3894  F1: 0.4215  AUC: 0.8859
+
+
+  ▸ SVM (RBF)
+  Validation   | Acc: 0.7475  Prec: 0.5540  Rec: 0.3797  F1: 0.4314  AUC: 0.9160
+  Test         | Acc: 0.7439  Prec: 0.5487  Rec: 0.3735  F1: 0.4227  AUC: 0.9006
+
+
+  ▸ Random Forest
+  Validation   | Acc: 0.7385  Prec: 0.5582  Rec: 0.3338  F1: 0.3726  AUC: 0.8983
+  Test         | Acc: 0.7379  Prec: 0.5413  Rec: 0.3328  F1: 0.3798  AUC: 0.8899
+
+
+============================================================
+  Feature Set: HOG + LBP + Texture
+============================================================
+
+  ▸ Logistic Regression
+
+/usr/local/lib/python3.12/dist-packages/sklearn/linear_model/_logistic.py:1247: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. From then on, it will always use 'multinomial'. Leave it to its default value to avoid this warning.
+  warnings.warn(
+
+  Validation   | Acc: 0.6697  Prec: 0.3932  Rec: 0.3268  F1: 0.3456  AUC: 0.8275
+  Test         | Acc: 0.6485  Prec: 0.3317  Rec: 0.2905  F1: 0.3014  AUC: 0.7938
+
+
+  ▸ SVM (RBF)
+  Validation   | Acc: 0.7086  Prec: 0.3815  Rec: 0.2011  F1: 0.2066  AUC: 0.8657
+  Test         | Acc: 0.7049  Prec: 0.2989  Rec: 0.1984  F1: 0.2018  AUC: 0.8459
+
+
+  ▸ Random Forest
+  Validation   | Acc: 0.6816  Prec: 0.2809  Rec: 0.1584  F1: 0.1436  AUC: 0.8106
+  Test         | Acc: 0.6790  Prec: 0.2458  Rec: 0.1562  F1: 0.1402  AUC: 0.8063
+
+
+
+================================================================================
+FINAL SUMMARY — Test Set (SKIN CANCER)
+================================================================================
+
+  Logistic Regression
+  Feature Set                   Acc    Prec     Rec      F1     AUC
+  ------------------------------------------------------------
+  Flat Pixels (Baseline)     0.6595  0.4179  0.3547  0.3788  0.8087
+  HOG                        0.6006  0.2446  0.2334  0.2365  0.7348
+  LBP                        0.6790  0.2584  0.1956  0.2008  0.7593
+  Texture                    0.7259  0.4966  0.3894  0.4215  0.8859
+  HOG + LBP + Texture        0.6485  0.3317  0.2905  0.3014  0.7938
+
+  SVM (RBF)
+  Feature Set                   Acc    Prec     Rec      F1     AUC
+  ------------------------------------------------------------
+  Flat Pixels (Baseline)     0.7204  0.3959  0.2617  0.2850  0.8907
+  HOG                        0.6950  0.3222  0.1850  0.1842  0.8207
+  LBP                        0.6890  0.2057  0.1836  0.1802  0.7862
+  Texture                    0.7439  0.5487  0.3735  0.4227  0.9006
+  HOG + LBP + Texture        0.7049  0.2989  0.1984  0.2018  0.8459
+
+  Random Forest
+  Feature Set                   Acc    Prec     Rec      F1     AUC
+  ------------------------------------------------------------
+  Flat Pixels (Baseline)     0.7199  0.3639  0.2633  0.2792  0.8835
+  HOG                        0.6745  0.3150  0.1493  0.1273  0.7425
+  LBP                        0.6875  0.2680  0.1857  0.1878  0.7826
+  Texture                    0.7379  0.5413  0.3328  0.3798  0.8899
+  HOG + LBP + Texture        0.6790  0.2458  0.1562  0.1402  0.8063
+
+Done!
